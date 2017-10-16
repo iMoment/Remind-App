@@ -17,6 +17,7 @@
 		914FA43F1F9524C0001FEE08 /* DateAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 914FA43D1F9524A7001FEE08 /* DateAlert.png */; };
 		914FA4401F9524C2001FEE08 /* TimeAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 914FA43C1F9524A7001FEE08 /* TimeAlert.png */; };
 		914FA4421F952C26001FEE08 /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FA4411F952C26001FEE08 /* UNService.swift */; };
+		914FA4441F953B42001FEE08 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FA4431F953B42001FEE08 /* AlertService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		914FA43C1F9524A7001FEE08 /* TimeAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeAlert.png; sourceTree = "<group>"; };
 		914FA43D1F9524A7001FEE08 /* DateAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DateAlert.png; sourceTree = "<group>"; };
 		914FA4411F952C26001FEE08 /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
+		914FA4431F953B42001FEE08 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				914FA4411F952C26001FEE08 /* UNService.swift */,
+				914FA4431F953B42001FEE08 /* AlertService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				914FA4251F951CFF001FEE08 /* ViewController.swift in Sources */,
 				914FA4421F952C26001FEE08 /* UNService.swift in Sources */,
 				914FA4231F951CFF001FEE08 /* AppDelegate.swift in Sources */,
+				914FA4441F953B42001FEE08 /* AlertService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
