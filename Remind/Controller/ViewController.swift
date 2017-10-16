@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         UNService.sharedInstance.authorize()
+        CLService.sharedInstance.authorize()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didEnterRegion), name: NSNotification.Name("internalNotification.enteredRegion"), object: nil)
     }
     
     @IBAction func timerButtonPressed(_ sender: UIButton) {
@@ -36,8 +40,22 @@ class ViewController: UIViewController {
     @IBAction func locationButtonPressed(_ sender: UIButton) {
         print("location")
         AlertService.actionSheet(in: self, title: "When I return") {
-            
+            CLService.sharedInstance.updateLocation()
         }
     }
+    
+    @objc func didEnterRegion() {
+        UNService.sharedInstance.locationRequest()
+    }
 }
+
+
+
+
+
+
+
+
+
+
 

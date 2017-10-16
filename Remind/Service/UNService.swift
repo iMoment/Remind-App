@@ -53,7 +53,7 @@ class UNService: NSObject {
     
     func dateRequest(with components: DateComponents) {
         let content = UNMutableNotificationContent()
-        content.title = "Date Trigger"
+        content.title = "Date Triggered"
         content.body = "It is now the future!"
         content.sound = .default()
         content.badge = 1
@@ -69,7 +69,17 @@ class UNService: NSObject {
     
     //  MARK: There is native framework trigger for locations in UserNotifications, but not reliable
     func locationRequest() {
+        let content = UNMutableNotificationContent()
+        content.title = "Location Triggered"
+        content.body = "Welcome back you silly goose you!"
+        content.sound = .default()
+        content.badge = 1
         
+        let request = UNNotificationRequest(identifier: "userNotification.location",
+                                            content: content,
+                                            trigger: nil)
+        
+        unCenter.add(request)
     }
 }
 
