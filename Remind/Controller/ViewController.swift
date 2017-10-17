@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         CLService.sharedInstance.authorize()
         
         NotificationCenter.default.addObserver(self, selector: #selector(didEnterRegion), name: NSNotification.Name("internalNotification.enteredRegion"), object: nil)
+        //  internalNotification.handleAction
+        NotificationCenter.default.addObserver(self, selector: #selector(handleAction(_:)), name: NSNotification.Name("internalNotification.handleAction"), object: nil)
     }
     
     @IBAction func timerButtonPressed(_ sender: UIButton) {
@@ -46,6 +48,19 @@ class ViewController: UIViewController {
     
     @objc func didEnterRegion() {
         UNService.sharedInstance.locationRequest()
+    }
+    
+    @objc func handleAction(_ sender: Notification) {
+        guard let action = sender.object as? NotificationActionId else { return }
+        
+        switch action {
+        case .timer:
+            print("We will implement timer action in response to user press")
+        case .date:
+            print("We will implement date action in response to user press")
+        case .location:
+            print("We will implement location action in response to user press")
+        }
     }
 }
 
