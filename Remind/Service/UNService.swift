@@ -34,6 +34,27 @@ class UNService: NSObject {
         unCenter.delegate = self
     }
     
+    func getAttachment(for id: NotificationAttachmentId) -> UNNotificationAttachment? {
+        var imageName: String
+        switch id {
+        case .timer:
+            imageName = "TimeAlert"
+        case .date:
+            imageName = "DateAlert"
+        case .location:
+            imageName = "LocationAlert"
+        }
+        
+        guard let url = Bundle.main.url(forResource: imageName, withExtension: "png") else { return nil }
+        do {
+            let attachment = try UNNotificationAttachment(identifier: id.rawValue, url: url, options: nil)
+            return attachment
+        } catch {
+            print("We received an error: \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
     //  Content/Trigger/Request
     func timerRequest(with interval: TimeInterval) {
         let content = UNMutableNotificationContent()
@@ -41,6 +62,10 @@ class UNService: NSObject {
         content.body = "Your timer is all done. YAY!"
         content.sound = .default()
         content.badge = 1
+        
+        if let attachment = getAttachment(for: .timer) {
+            content.attachments = [attachment]
+        }
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
         
@@ -58,6 +83,10 @@ class UNService: NSObject {
         content.sound = .default()
         content.badge = 1
         
+        if let attachment = getAttachment(for: .date) {
+            content.attachments = [attachment]
+        }
+        
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         
         let request = UNNotificationRequest(identifier: "userNotification.date",
@@ -74,6 +103,10 @@ class UNService: NSObject {
         content.body = "Welcome back you silly goose you!"
         content.sound = .default()
         content.badge = 1
+        
+        if let attachment = getAttachment(for: .location) {
+            content.attachments = [attachment]
+        }
         
         let request = UNNotificationRequest(identifier: "userNotification.location",
                                             content: content,

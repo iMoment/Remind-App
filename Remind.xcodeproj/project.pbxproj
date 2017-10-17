@@ -18,6 +18,7 @@
 		914FA4401F9524C2001FEE08 /* TimeAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 914FA43C1F9524A7001FEE08 /* TimeAlert.png */; };
 		914FA4421F952C26001FEE08 /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FA4411F952C26001FEE08 /* UNService.swift */; };
 		914FA4441F953B42001FEE08 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FA4431F953B42001FEE08 /* AlertService.swift */; };
+		91D837EB1F95DDC90034165B /* NotificationAttachmentId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D837EA1F95DDC90034165B /* NotificationAttachmentId.swift */; };
 		91E65C6C1F9549F600DA9C4C /* CLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E65C6B1F9549F600DA9C4C /* CLService.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		914FA43D1F9524A7001FEE08 /* DateAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DateAlert.png; sourceTree = "<group>"; };
 		914FA4411F952C26001FEE08 /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 		914FA4431F953B42001FEE08 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		91D837EA1F95DDC90034165B /* NotificationAttachmentId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAttachmentId.swift; sourceTree = "<group>"; };
 		91E65C6B1F9549F600DA9C4C /* CLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 		914FA4361F951D49001FEE08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				91D837EA1F95DDC90034165B /* NotificationAttachmentId.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				91E65C6C1F9549F600DA9C4C /* CLService.swift in Sources */,
 				914FA4391F951E13001FEE08 /* ShadowView.swift in Sources */,
+				91D837EB1F95DDC90034165B /* NotificationAttachmentId.swift in Sources */,
 				914FA4251F951CFF001FEE08 /* ViewController.swift in Sources */,
 				914FA4421F952C26001FEE08 /* UNService.swift in Sources */,
 				914FA4231F951CFF001FEE08 /* AppDelegate.swift in Sources */,
